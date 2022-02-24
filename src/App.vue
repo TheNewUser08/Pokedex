@@ -6,5 +6,8 @@ export default defineComponent({
 });
 </script>
 <template>
+  <router-link to="/" class="absolute"
+    ><img src="../../public/Logo.svg" alt="Logo"
+  /></router-link>
   <router-view />
 </template>
