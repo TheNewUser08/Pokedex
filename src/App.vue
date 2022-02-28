@@ -6,8 +6,8 @@ export default defineComponent({
 });
 </script>
 <template>
-  <router-link to="/" class="absolute"
-    ><img src="../../public/Logo.svg" alt="Logo"
+  <router-link to="/" class="fixed bg-warm-gray-200 w-full">
+    <img src="../Logo.svg" alt="Logo"
   /></router-link>
-  <router-view />
+  <router-view class="mx-[150px] <sm:m-0"/>
 </template>

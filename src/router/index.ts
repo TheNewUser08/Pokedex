@@ -4,6 +4,13 @@ const routes = [
   {
     path: '/',
     component: () => import('/@/pages/Index.vue'),
+    name: "Index",
+    props: (route: any) => ({ pages: route.query.q })
+  },
+  {
+    path: '/:id',
+    component: () => import('/@/pages/PokemonPage.vue'),
+    name: 'pokemonPage',
   },
 ];
 

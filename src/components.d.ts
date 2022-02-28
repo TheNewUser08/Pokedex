@@ -4,7 +4,8 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    HelloWorld: typeof import('./components/HelloWorld.vue')['default']
+    NavArrow: typeof import('./components/NavArrow.vue')['default']
+    PokemonGrid: typeof import('./components/PokemonGrid.vue')['default']
   }
 }
 

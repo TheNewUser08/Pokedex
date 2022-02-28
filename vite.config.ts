@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import { resolve } from 'pathe';
 import vue from '@vitejs/plugin-vue';
 import WindiCSS from 'vite-plugin-windicss';
-import Components from 'unplugin-vue-components/vite'
+import Components from 'unplugin-vue-components/vite';
 import PurgeIcons from 'vite-plugin-purge-icons';
 import ViteFonts from 'vite-plugin-fonts';
 import svgLoader from 'vite-svg-loader';
@@ -29,7 +29,17 @@ export default defineConfig({
     // https://github.com/stafyniaksacha/vite-plugin-fonts#readme
     ViteFonts({
       google: {
-        families: ['Open Sans', 'Montserrat', 'Fira Sans', "Exo 2"],
+        families: [
+          'Open Sans',
+          'Montserrat',
+          'Fira Sans',
+          {
+            name: 'Exo 2',
+            styles:
+              'ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900',
+            defer: true,
+          },
+        ],
       },
     }),
 
@@ -45,13 +55,7 @@ export default defineConfig({
   ],
 
   optimizeDeps: {
-    include: [
-      'vue',
-      'vue-router',
-      '@vueuse/core',
-    ],
-    exclude: [
-      'vue-demi',
-    ],
+    include: ['vue', 'vue-router', '@vueuse/core'],
+    exclude: ['vue-demi'],
   },
 });

@@ -9,7 +9,7 @@ export default defineConfig({
       sans: ['Open Sans', 'ui-sans-serif', 'system-ui'],
       serif: ['Montserrat', 'ui-serif', 'Georgia'],
       mono: ['Fira Sans', 'ui-monospace', 'SFMono-Regular'],
-      body: ['Exo 2'],
+      body: ['"Exo 2"'],
     },
   },
 });
